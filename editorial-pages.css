@@ -162,6 +162,16 @@
   margin: 14px auto 0;
 }
 
+.about-page .ep-hero-stack-head {
+  max-width: 52rem;
+}
+
+.about-page .ep-hero-stack-head .ep-title {
+  max-width: 14ch;
+  font-size: clamp(2rem, 4.1vw, 3.7rem);
+  line-height: 0.94;
+}
+
 .ep-hero-cards--stacked {
   max-width: 56rem;
   margin: 0 auto;
@@ -536,6 +546,11 @@
   line-height: 1.68;
 }
 
+.ep-band--dark .ep-list li,
+.ep-band--blue .ep-list li {
+  color: rgba(255,255,255,0.94);
+}
+
 .ep-list li::before {
   content: "";
   position: absolute;
@@ -545,6 +560,11 @@
   height: 7px;
   border-radius: 999px;
   background: #cc3a20;
+}
+
+.ep-band--dark .ep-list li::before,
+.ep-band--blue .ep-list li::before {
+  background: rgba(255,255,255,0.86);
 }
 
 .ep-showcase-grid {

@@ -6,7 +6,7 @@ $page = [
   'hero' => [
     'layout' => 'stacked_cards',
     'eyebrow' => 'About Us / Meet The Coaches',
-    'title' => "About the On-Deck Alliance\nToledo skateboarding nonprofit & youth mentorship program",
+    'title' => "About On-Deck Alliance\nYouth mentorship through skateboarding\nin Toledo",
     'copy' => 'The On-Deck Alliance is a Toledo-based skateboarding nonprofit dedicated to empowering youth through skateboarding lessons, mentorship, and community-driven programs. From local skateparks to structured sessions at the Frederick Douglass Center, we create opportunities for confidence, resilience, and long-term growth.',
     'buttons' => [
       ['label' => 'Explore Program', 'href' => '/program.php', 'class' => 'ep-btn--primary'],
