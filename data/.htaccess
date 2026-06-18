@@ -1,0 +1,3 @@
+# Block ALL access to the data directory from the browser
+Order allow,deny
+Deny from all

@@ -1,0 +1,112 @@
+{
+  "mosaic": {
+    "tiles_left": [
+      { "num": 1, "img": "images/kids raising hands.webp", "label": "Social & emotional skills", "dot": "orange" },
+      { "num": 2, "img": "images/chandler helpn with helmet.webp", "label": "Mental & physical wellness", "dot": "blue" },
+      { "num": 3, "img": "images/kids in front of lockers.webp", "label": "Safe skateable spaces", "dot": "green" }
+    ],
+    "tiles_right": {
+      "hero": { "img": "images/group shot.webp", "alt": "On-Deck Alliance group photo" },
+      "smalls": [
+        { "img": "images/for educators.webp", "alt": "For educators" },
+        { "img": "images/push ups_fun.webp", "alt": "Youth skateboarding" }
+      ]
+    }
+  },
+  "testimonial_rotator": {
+    "items": [
+      { "img": "images/smiling.webp", "quote": "This program changed my life. I found my confidence here.", "by": "Marcus, Age 14" },
+      { "img": "images/josh_cunningham.webp", "quote": "Skateboarding saved my life. Now we're saving others.", "by": "ODA Founder" },
+      { "img": "images/kids.webp", "quote": "I never thought I'd be a mentor. ODA showed me the way.", "by": "Jaylen, Volunteer" }
+    ]
+  },
+  "proud_partners": {
+    "partners": [
+      {
+        "file": "frederick-douglass.png",
+        "name": "The Frederick Douglass Community Association",
+        "desc": "\"The Doug\" has donated in-kind facilities, staff support, and countless other resources to ODA, providing a space to work, learn, and a valuable network of connections for students and staffers."
+      },
+      {
+        "file": "toledo-youth-services.jpg",
+        "name": "City of Toledo Youth Services",
+        "desc": "The City of Toledo's Youth Programming Grant was pivotal in the \"I Can\" Program with a $15,000 donation in 2023, funding a skatepark build, PPE for students, and staff salaries."
+      },
+      {
+        "file": "dubs-foundation.png",
+        "name": "The DUBS Foundation",
+        "desc": "Austin and Nick Weber build skate ramps and obstacles for class use and the D.I.Y. park in Toledo, and help create and support events for the \"I Can\" Program."
+      },
+      {
+        "file": "advocate-skateworks.webp",
+        "name": "Advocate Skateworks",
+        "desc": "Travis at ASW helped ODA secure Vans skate shoes and an invaluable number of skateboard decks for students through his relationships with notable skate companies."
+      },
+      {
+        "file": "pizza-cat-toledo.png",
+        "name": "Pizza Cat Toledo",
+        "desc": "Pizza Cat donated THIRTY pizzas for the 2024 4 Cs Games fundraiser. Their mission aligns with ODA — rebuilding the local community through the youth within it."
+      },
+      {
+        "file": "nuclear-skate-cult.jpg",
+        "name": "Nuclear Skate Cult",
+        "desc": "Toledo's premier skate team has supported ODA since day one by sponsoring events, recruiting coaches, and promoting the mission to empower Toledo's youth through skateboarding."
+      },
+      {
+        "file": "steez-llc.webp",
+        "name": "Steez LLC",
+        "desc": "Steez is a local skate company known for butter-smooth skate wax and street apparel, donating prizes for ODA events and contests."
+      },
+      {
+        "file": "lavish-hardware.png",
+        "name": "Lavish Hardware",
+        "desc": "Lavish is a local skate company known for rock-solid hardware and unique apparel. They support ODA with prizes for competitions and events to keep the \"I Can\" Program running."
+      },
+      {
+        "file": "modern-skate-shop.png",
+        "name": "Modern Skate Shop",
+        "desc": "Detroit, Michigan-based skate shop and indoor park. Modern contributes prizes for ODA events and fundraisers, helping strengthen the Toledo skateboarding community."
+      },
+      {
+        "file": "just-skateboarding.jpg",
+        "name": "Just Skateboarding",
+        "desc": "Toledo's local skate shop. Owner Scott Tutek provides skateboarding supplies, equipment, and apparel plus deep roots in the local skate scene."
+      },
+      {
+        "file": "rynos-skate-shop.jpg",
+        "name": "Ryno's Skate Shop",
+        "desc": "Fremont, Ohio-based skate shop donating prizes for contests and events while strengthening ODA's connections to the Fremont skateboarding community."
+      },
+      {
+        "file": "lil-jawns.png",
+        "name": "Lil Jawns Skateboard Rails",
+        "desc": "Texas-based, skater-owned company supporting skateboarding as a culture and community. Donated prizes for ODA fundraising events and contests."
+      },
+      {
+        "file": "vans.webp",
+        "name": "Vans",
+        "desc": "Vans is a well-known brand in the skate community. ODA received a donation of skate shoes, tee shirts, and over 100 skateboard decks from Vans."
+      },
+      {
+        "file": "printed-on-a-lark.png",
+        "name": "Printed on a Lark",
+        "desc": "Toledo-based screen printing company. Emilia taught ODA screen printing, giving the program the ability to create apparel, raise funds, and teach students a marketable skill."
+      },
+      {
+        "file": "smollie-skateboard.webp",
+        "name": "Smollie Skateboard Co.",
+        "desc": "Smollie donated training straps used in every \"I Can\" classroom session, giving students a safe and realistic skateboarding experience as they develop their skills."
+      },
+      {
+        "file": "keen-ramps.png",
+        "name": "Keen Ramps",
+        "desc": "Long Beach, CA-based skate company. Keen Ramps donated a ledge and ramps used in every \"I Can\" class, providing safe, realistic skatepark obstacles for students."
+      },
+      {
+        "file": "indo-board.png",
+        "name": "Indo Board Balance Boards",
+        "desc": "Indo Board donated balance boards to the \"I Can\" Program — a vital training tool strengthening students' balance skills and board control."
+      }
+    ]
+  }
+}

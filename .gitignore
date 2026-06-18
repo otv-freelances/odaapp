@@ -1,0 +1,41 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+.history/
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build output
+dist/output.css
+dist/*.map
+build/
+coverage/
+.cache/
+.parcel-cache/
+
+# Local environment / generated files
+_codex_screens/
+uploads/posts/
+uploads/tmp/
+uploads/cache/
+*.log
+php_errors.log
+error_log
+data/rate_limit.json
+
+# Sensitive local config
+.env
+.env.*
+!.env.example
+config.php
+
+# Git metadata from tools
+.openclaude-profile.json

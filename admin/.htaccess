@@ -1,0 +1,7 @@
+# Admin area: disable directory listing, force PHP through Apache
+Options -Indexes
+
+# Prevent direct execution bypass tricks
+<FilesMatch "^(?!.*\.php$).*$">
+    # Allow non-PHP files (CSS, images etc.) through
+</FilesMatch>
