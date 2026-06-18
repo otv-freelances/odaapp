@@ -6,8 +6,8 @@ $page = [
   'hero' => [
     'layout' => 'mono_cards',
     'eyebrow' => 'Toledo youth opportunities',
-    'title' => 'Real opportunities for Toledo youth',
-    'copy' => 'On-Deck Alliance creates youth opportunities in Toledo through skateboarding, mentorship, confidence-building, and strong community support.',
+    'title' => "Youth opportunities\nin Toledo, Ohio",
+    'copy' => 'Real programs. Real mentorship. Real impact. On-Deck Alliance creates youth opportunities in Toledo through skateboarding, mentorship, confidence-building, and strong community support.',
     'buttons' => [
       ['label' => 'Explore Program', 'href' => '/program.php', 'class' => 'ep-btn--primary'],
       ['label' => 'For Schools', 'href' => '/for-schools.php', 'class' => 'ep-btn--green'],
