@@ -33,6 +33,7 @@ $hero = $page['hero'] ?? [];
 $feature = $page['feature'] ?? null;
 $showcase = $page['showcase'] ?? null;
 $grid = $page['grid'] ?? null;
+$sections = $page['sections'] ?? [];
 $cta = $page['cta'] ?? null;
 $form = $page['form'] ?? null;
 $heroLayout = $hero['layout'] ?? 'cards';
@@ -307,6 +308,108 @@ $coreStyleVersion = @filemtime(dirname(__DIR__) . '/skate-upgrade.css') ?: $styl
         </div>
       </section>
     <?php endif; ?>
+
+    <?php foreach ($sections as $section): ?>
+      <?php $sectionLayout = $section['layout'] ?? 'grid'; ?>
+      <?php if ($sectionLayout === 'split_image'): ?>
+        <section<?= !empty($section['id']) ? ' id="' . mp_escape($section['id']) . '"' : '' ?> class="ep-band <?= !empty($section['band_class']) ? mp_escape($section['band_class']) : '' ?>">
+          <div class="ep-shell ep-split-grid <?= !empty($section['reverse']) ? 'ep-split-grid--reverse' : '' ?>">
+            <div class="ep-split-copy">
+              <?php if (!empty($section['eyebrow'])): ?><p class="ep-kicker"><?= mp_escape($section['eyebrow']) ?></p><?php endif; ?>
+              <h2 class="ep-section-title"><?= nl2br(mp_escape($section['title'] ?? '')) ?></h2>
+              <?php if (!empty($section['copy'])): ?><p class="ep-section-copy"><?= mp_escape($section['copy']) ?></p><?php endif; ?>
+              <?php if (!empty($section['bullets'])): ?>
+                <ul class="ep-list">
+                  <?php foreach ($section['bullets'] as $bullet): ?>
+                    <li><?= mp_escape($bullet) ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+              <?php if (!empty($section['buttons'])): ?>
+                <div class="ep-panel-actions">
+                  <?php foreach ($section['buttons'] as $button): ?>
+                    <a class="ep-btn <?= mp_escape($button['class'] ?? 'ep-btn--primary') ?>" href="<?= mp_escape($button['href'] ?? '#') ?>"><?= mp_escape($button['label'] ?? 'Learn More') ?></a>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
+            </div>
+            <figure class="ep-split-image">
+              <?php mp_render_media($section['image'] ?? '', $section['alt'] ?? ($section['title'] ?? ''), '', $section['title'] ?? 'Feature Image'); ?>
+            </figure>
+          </div>
+        </section>
+      <?php elseif ($sectionLayout === 'showcase'): ?>
+        <section<?= !empty($section['id']) ? ' id="' . mp_escape($section['id']) . '"' : '' ?> class="ep-band <?= !empty($section['band_class']) ? mp_escape($section['band_class']) : 'ep-band--dark' ?>">
+          <div class="ep-shell ep-showcase-grid">
+            <figure class="ep-showcase-photo">
+              <?php mp_render_media($section['image'] ?? '', $section['alt'] ?? ($section['title'] ?? ''), '', $section['title'] ?? 'Showcase Image'); ?>
+            </figure>
+            <div class="ep-showcase-side">
+              <?php if (!empty($section['eyebrow'])): ?><p class="ep-kicker"><?= mp_escape($section['eyebrow']) ?></p><?php endif; ?>
+              <h2 class="ep-section-title"><?= nl2br(mp_escape($section['title'] ?? '')) ?></h2>
+              <?php if (!empty($section['copy'])): ?><p class="ep-section-copy"><?= mp_escape($section['copy']) ?></p><?php endif; ?>
+              <?php foreach (($section['cards'] ?? []) as $card): ?>
+                <article class="ep-overlay-card">
+                  <?php if (!empty($card['eyebrow'])): ?><span class="ep-overlay-card__kicker"><?= mp_escape($card['eyebrow']) ?></span><?php endif; ?>
+                  <span class="ep-overlay-card__title"><?= mp_escape($card['title'] ?? '') ?></span>
+                  <?php if (!empty($card['copy'])): ?><span class="ep-overlay-card__copy"><?= mp_escape($card['copy']) ?></span><?php endif; ?>
+                </article>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </section>
+      <?php elseif ($sectionLayout === 'grid'): ?>
+        <section<?= !empty($section['id']) ? ' id="' . mp_escape($section['id']) . '"' : '' ?> class="ep-band <?= !empty($section['band_class']) ? mp_escape($section['band_class']) : '' ?>">
+          <div class="ep-shell">
+            <div class="ep-grid-head">
+              <?php if (!empty($section['eyebrow'])): ?><p class="ep-kicker"><?= mp_escape($section['eyebrow']) ?></p><?php endif; ?>
+              <h2 class="ep-section-title"><?= nl2br(mp_escape($section['title'] ?? '')) ?></h2>
+              <?php if (!empty($section['copy'])): ?><p class="ep-section-copy"><?= mp_escape($section['copy']) ?></p><?php endif; ?>
+            </div>
+            <div class="ep-grid">
+              <?php foreach (($section['cards'] ?? []) as $card): ?>
+                <article class="ep-grid-card">
+                  <div class="ep-grid-card__media">
+                    <?php mp_render_media($card['image'] ?? '', $card['alt'] ?? ($card['title'] ?? ''), '', $card['title'] ?? 'Grid Image'); ?>
+                  </div>
+                  <div class="ep-grid-card__body">
+                    <h3 class="ep-card-title"><?= mp_escape($card['title'] ?? '') ?></h3>
+                    <?php if (!empty($card['copy'])): ?><p class="ep-grid-card__copy"><?= mp_escape($card['copy']) ?></p><?php endif; ?>
+                  </div>
+                </article>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </section>
+      <?php elseif ($sectionLayout === 'cta'): ?>
+        <section<?= !empty($section['id']) ? ' id="' . mp_escape($section['id']) . '"' : '' ?> class="ep-band <?= !empty($section['band_class']) ? mp_escape($section['band_class']) : '' ?>">
+          <div class="ep-shell ep-cta-grid">
+            <div class="ep-cta-copy">
+              <?php if (!empty($section['eyebrow'])): ?><p class="ep-kicker"><?= mp_escape($section['eyebrow']) ?></p><?php endif; ?>
+              <h2 class="ep-section-title"><?= nl2br(mp_escape($section['title'] ?? '')) ?></h2>
+              <?php if (!empty($section['copy'])): ?><p class="ep-section-copy"><?= mp_escape($section['copy']) ?></p><?php endif; ?>
+              <?php if (!empty($section['bullets'])): ?>
+                <ul class="ep-list">
+                  <?php foreach ($section['bullets'] as $bullet): ?>
+                    <li><?= mp_escape($bullet) ?></li>
+                  <?php endforeach; ?>
+                </ul>
+              <?php endif; ?>
+              <?php if (!empty($section['buttons'])): ?>
+                <div class="ep-panel-actions">
+                  <?php foreach ($section['buttons'] as $button): ?>
+                    <a class="ep-btn <?= mp_escape($button['class'] ?? 'ep-btn--primary') ?>" href="<?= mp_escape($button['href'] ?? '#') ?>"><?= mp_escape($button['label'] ?? 'Learn More') ?></a>
+                  <?php endforeach; ?>
+                </div>
+              <?php endif; ?>
+            </div>
+            <figure class="ep-cta-panel ep-cta-panel--image">
+              <?php mp_render_media($section['image'] ?? '', $section['alt'] ?? ($section['title'] ?? ''), '', $section['title'] ?? 'Callout Image'); ?>
+            </figure>
+          </div>
+        </section>
+      <?php endif; ?>
+    <?php endforeach; ?>
 
     <?php if ($cta): ?>
       <section class="ep-band <?= !empty($cta['band_class']) ? mp_escape($cta['band_class']) : '' ?>">
