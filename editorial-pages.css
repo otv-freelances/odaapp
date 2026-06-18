@@ -882,8 +882,8 @@
 }
 
 .youth-page .ep-title {
-  max-width: 6.5ch;
-  font-size: clamp(2rem, 3.35vw, 3.2rem);
+  max-width: 5.9ch;
+  font-size: clamp(1.9rem, 3.05vw, 2.95rem);
   line-height: 0.93;
 }
 
@@ -891,8 +891,13 @@
   max-width: 31rem;
 }
 
+.youth-page .ep-hero-grid {
+  grid-template-columns: minmax(320px, 0.8fr) minmax(420px, 1.2fr);
+  gap: clamp(32px, 4vw, 58px);
+}
+
 .youth-page .ep-hero-copy {
-  margin-left: -22px;
+  margin-left: -36px;
 }
 
 .youth-page main > .ep-band:first-child {
